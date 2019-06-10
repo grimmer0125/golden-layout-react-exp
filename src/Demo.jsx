@@ -6,6 +6,8 @@ import GoldenLayout from "golden-layout";
 window.React = React;
 window.ReactDOM = ReactDOM;
 
+let myLayout = null;
+
 class User extends React.Component {
   //   getInitialState: function() {
   //     return this.props.userData;
@@ -170,10 +172,10 @@ const config = {
   ]
 };
 
-const myLayout = new GoldenLayout(config);
+myLayout = new GoldenLayout(config);
 myLayout.registerComponent("user-list", UserList);
 myLayout.registerComponent("user-detail", UserDetail);
-myLayout.init();
+// myLayout.init();
 
 // myLayout.registerComponent("test-component", Demo);
 
@@ -184,4 +186,4 @@ myLayout.init();
 //   return <div>hello world</div>;
 // }
 
-export default Demo;
+export default myLayout;
